@@ -1,0 +1,228 @@
+* {
+  margin-top: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+img {
+  height: 25px;
+  margin-right: 10px;
+}
+
+li {
+  list-style-type: none;
+  padding-bottom: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #020202;
+}
+
+/* Хедер с поисковой строкой 
+==================================================
+*/
+ .header {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  max-width: 1260px;
+  --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+form {
+  position: relative;
+  margin: auto;
+}
+input {
+  width: 100%;
+  height: 40px;
+  padding-left: 15px;
+  border: 1px #e6e6e6 solid;
+  border-radius: 30px;
+}
+button {
+  border: none;
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  cursor: pointer;
+  background-color: #ffffff;
+  
+}
+
+/* Область с карточками 
+==================================================
+*/
+.container {
+  max-width: 1280px;
+  --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+  color: #020202;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: auto;
+}
+
+.card {
+  width: 32%;
+  min-width: 400px;
+  min-height: 260px;
+  height: 30vh;
+  margin: auto;
+  padding-top: 15px;
+  padding-left: 20px;
+  font-weight: 400;
+  box-shadow: 5px 10px 15px #e6e6e6;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.card-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.card-email {
+  text-decoration: underline;
+  display: flex;
+  margin-top: 8px;
+}
+
+.card-phone_number {
+  display: flex;
+}
+
+/* Стилизация попапа
+==============================================
+*/
+.popup {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(86, 97, 112, 0.3);
+  z-index: 2;
+}
+.popup.active {
+  display: block;
+}
+
+.popup__container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.popup__body {
+  margin: 120px auto auto;
+  width: 600px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  position: relative;
+  z-index: 5;
+}
+
+.popup__name {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-bottom: 45px;
+  
+}
+
+.popup__content {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+li.phone {
+  font-size: 19px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+li.email {
+  text-decoration: underline;
+}
+li.position_name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+li.department{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.popup__leftbar {
+  width: 250px;
+  padding-top: 5px;
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.popup__rightbar {
+  width: 330px;
+  padding-top: 0;
+  padding-right: 20px;
+  font-weight: 100;
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+.popup__footer-content {
+  display: flex;
+  margin-bottom: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-weight: 100;
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+.info {
+  margin-left: 20px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+ .popup__close {
+  position: absolute;
+  margin: -20px 280px 0 280px;
+  padding-top: 9px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #9601a3;
+  color: #ffffff;
+  cursor: pointer;
+}
+.popup__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
